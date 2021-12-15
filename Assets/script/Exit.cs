@@ -14,8 +14,5 @@ public class Exit : MonoBehaviour
 #endif
     }
 
-    public void ReloadGame(string scn)
-    {
-        SceneManager.LoadScene(scn);
-    }
+
 }
