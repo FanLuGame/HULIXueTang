@@ -22,7 +22,7 @@ public class HistoryList : MonoBehaviour
                 GameObject go = Instantiate(stepTemple);
                 go.transform.parent = transform;
                 Text t = go.GetComponentInChildren<Text>();
-                t.text= tp.Name();
+                t.text= tp.Tip();
             }
         }
     }

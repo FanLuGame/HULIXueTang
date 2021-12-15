@@ -18,7 +18,7 @@ public class Topic : MonoBehaviour
     {
         return fullscore;
     }
-    public virtual string Name()
+    public virtual string Tip()
     {
         return tpname;
     }

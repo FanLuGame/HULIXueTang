@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Exit : MonoBehaviour
 {
@@ -11,5 +12,10 @@ public class Exit : MonoBehaviour
 #else
         Application.Quit();
 #endif
+    }
+
+    public void ReloadGame(string scn)
+    {
+        SceneManager.LoadScene(scn);
     }
 }
