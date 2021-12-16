@@ -21,6 +21,7 @@ public class Exit : MonoBehaviour
         {
             //这个地方可以写“再按一次退出”的提示
             Debug.Log("再按一次退出");
+            Toast.Show("再按一次退出", 2, 1.2f);
             StartCoroutine(resetTimes());
             if (escapeTimes)
             {
