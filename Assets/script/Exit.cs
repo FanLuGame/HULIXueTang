@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class Exit : MonoBehaviour
 {
+    public bool escapeTimes = false;
     public void QuitGame()
     {
 #if UNITY_EDITOR
@@ -13,6 +14,41 @@ public class Exit : MonoBehaviour
         Application.Quit();
 #endif
     }
+    void Update()
+    {
+        //Debug.Log(OnFont());
+        if (Input.GetKeyDown(KeyCode.Escape)&&OnFont())
+        {
+            //这个地方可以写“再按一次退出”的提示
+            Debug.Log("再按一次退出");
+            StartCoroutine(resetTimes());
+            if (escapeTimes)
+            {
+                QuitGame();
+            }
+            escapeTimes = true;
 
+        }
 
+    }
+    IEnumerator resetTimes()
+    {
+        yield return new WaitForSeconds(1);
+        escapeTimes = false;
+    }
+    bool OnFont()
+    {
+        bool res = true;
+        for (int i = 0; i < transform.parent.childCount; i++)
+        {
+            var g = transform.parent.GetChild(i);
+            if (g!=transform&&g.gameObject.active)
+            {
+                res = false;
+            }
+
+        }
+        
+        return res;
+    }
 }
