@@ -5,7 +5,8 @@ using UnityEngine.UI;
 
 public class ScoreResult : MonoBehaviour
 {
+    public Text title;
     public Text tip;
-    public Text fullscore;
     public Text score;
+    public Image scoreImage;
 }
