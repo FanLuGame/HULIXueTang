@@ -11,14 +11,14 @@ GameObject:
   - component: {fileID: 2227317523482935279}
   - component: {fileID: 2227317523482935274}
   - component: {fileID: 2227317523482935273}
-  - component: {fileID: 1737258222}
+  - component: {fileID: 1113347301}
   m_Layer: 5
   m_Name: info_tip
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2227317523482935279
 RectTransform:
   m_ObjectHideFlags: 0
@@ -74,7 +74,7 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
---- !u!114 &1737258222
+--- !u!114 &1113347301
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -86,9 +86,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 654b12eaf2c2b7046bd95a7c3d0514fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tpname: "\u7740\u88C5\u6574\u6D01\u3001\u89C4\u8303\uFF0C\u6D17\u624B\uFF0C\u6234\u53E3\u7F69"
-  score: 2
-  fullscore: 2
+  tpname: "\u6838\u5BF9\u5E8A\u53F7\u3001\u59D3\u540D\u3001ID\u53F7\uFF1B\u8BE2\u95EE\u4E09\u53F2\uFF0C\u4E86\u89E3\u8FDB\u98DF\u60C5\u51B5\u7B49\uFF1B\u8BC4\u4F30\u6CE8\u5C04\u90E8\u4F4D\u76AE\u80A4"
+  score: 3
+  fullscore: 3
 --- !u!1 &2227317524186912151
 GameObject:
   m_ObjectHideFlags: 0
@@ -154,15 +154,15 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 95
+    m_FontSize: 46
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 38
     m_MaxSize: 143
-    m_Alignment: 4
+    m_Alignment: 3
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u7740\u88C5\u6574\u6D01\u3001\u89C4\u8303\uFF0C\u6D17\u624B\uFF0C\u6234\u53E3\u7F69"
+  m_Text: "\u6838\u5BF9\u5E8A\u53F7\u3001\u59D3\u540D\u3001ID\u53F7\uFF1B\u8BE2\u95EE\u4E09\u53F2\uFF0C\u4E86\u89E3\u8FDB\u98DF\u60C5\u51B5\u7B49\uFF1B\u8BC4\u4F30\u6CE8\u5C04\u90E8\u4F4D\u76AE\u80A4"

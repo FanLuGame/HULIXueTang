@@ -6,6 +6,7 @@ using UnityEngine;
 public class SwitchList : MonoBehaviour
 {
     private int index = 0;
+    public bool IsInstance = false;
     public int Index { get => index; set
         {
             index = value;
@@ -16,6 +17,7 @@ public class SwitchList : MonoBehaviour
     public static SwitchList instance;
     private void Awake()
     {
+        if(IsInstance)
         instance = this;
     }
     // Start is called before the first frame update
