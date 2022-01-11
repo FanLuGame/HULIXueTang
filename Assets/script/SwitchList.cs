@@ -25,7 +25,12 @@ public class SwitchList : MonoBehaviour
     {
         Fresh();
     }
-
+    public void Tip()
+    {
+        Transform tmp = transform.GetChild(index);
+        string msg=tmp.GetComponent<TipHelper>().tip;
+        FuncHelper.ShowTip(msg);
+    }
 
     void Fresh()
     {
