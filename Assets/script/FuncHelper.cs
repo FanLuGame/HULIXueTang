@@ -26,6 +26,7 @@ public class FuncHelper : MonoBehaviour
         {
             instance.tip.GetComponentInChildren<Text>().text = msg;
             instance.tip.SetActive(true);
+
         }
 
 
