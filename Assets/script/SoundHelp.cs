@@ -7,6 +7,11 @@ public class SoundHelp : MonoBehaviour
     public AudioClip pao;
     public AudioClip wei;
     public AudioClip didi;
+    public static SoundHelp instance;
+    private void Awake()
+    {
+        instance = this;
+    }
     public void PlaySound(float vo)
     {
         AudioSource.PlayClipAtPoint(pao, FindObjectOfType<AudioListener>().transform.position, vo);
