@@ -14,7 +14,7 @@ public class SelectTopic : Topic
             res = true;
             foreach (var g in trueObjs)
             {
-                if (g.active)
+                if (g.activeSelf)
                 {
                     res = false;
                 }
@@ -24,7 +24,7 @@ public class SelectTopic : Topic
         {
             foreach (var g in trueObjs)
             {
-                if (!g.active) res = false;
+                if (!g.activeSelf) res = false;
             }
 
         }

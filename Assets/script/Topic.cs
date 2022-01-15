@@ -11,6 +11,10 @@ public class Topic : MonoBehaviour
     public int score = 0;
     public bool right = true;
     public int fullscore = 10;
+    public void SetRight(bool res)
+    {
+        right = res;
+    }
     public virtual int Score()
     {
         return score;

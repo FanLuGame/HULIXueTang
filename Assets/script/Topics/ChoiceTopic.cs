@@ -5,19 +5,19 @@ using UnityEngine.UI;
 
 public class ChoiceTopic : Topic
 {
-    public GameObject[] trueToggles;
-    public GameObject[] falseToggles;
+    public GameObject[] trueObjs;
+    public GameObject[] falseObjs;
     public override bool Right()
     {
         bool res = true;
-        foreach (var t in trueToggles)
+        foreach (var t in trueObjs)
         {
             if (!t.active)
             {
                 res = false;
             }
         }
-        foreach (var t in falseToggles)
+        foreach (var t in falseObjs)
         {
             if (t.active)
             {
