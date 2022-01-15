@@ -9,16 +9,23 @@ public class SpriteAnimation : MonoBehaviour
 {
     public Sprite[] sps;
     public float delay=0.2f;
+    [SerializeField]
+    float timer = 0;
+    [SerializeField]
+    int i = 0;
     // Start is called before the first frame update
-    IEnumerator Start()
+    
+
+
+
+    private void Update()
     {
-        while(true)
-        for (int i = 0; i < sps.Length; i++)
+        timer += Time.deltaTime;
+        if (timer>delay)
         {
+            timer = 0;
             GetComponent<Image>().sprite = sps[i];
-            yield return new WaitForSeconds(delay);
+            i = (i + 1) % sps.Length;
         }
     }
-
-
 }

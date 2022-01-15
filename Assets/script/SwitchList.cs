@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class SwitchList : MonoBehaviour
 {
@@ -15,6 +16,7 @@ public class SwitchList : MonoBehaviour
     }
     public event Action<int> OnObjChange;
     public static SwitchList instance;
+
     private void Awake()
     {
         if(IsInstance)
@@ -44,10 +46,15 @@ public class SwitchList : MonoBehaviour
             else
             {
                 transform.GetChild(i).gameObject.SetActive(false);
+
             }
         }
     }
-
+    public void SetIndex(int i)
+    {
+        index = i;
+        Fresh();
+    }
     public void Previous()
     {
         if (Index - 1 >= 0) Index--;
