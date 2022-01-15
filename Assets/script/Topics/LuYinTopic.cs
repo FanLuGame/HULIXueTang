@@ -4,11 +4,17 @@ using UnityEngine;
 
 public class LuYinTopic : Topic
 {
+    public MicrophoneManager mm;
     public override int Score()
     {
-        if (GetComponent<MicrophoneManager>().audioClip)
+        if (mm.audioClip)
             return fullscore;
         return 0;
     }
-
+    public override bool Right()
+    {
+        if (mm.audioClip)
+            return true;
+        return false;
+    }
 }

@@ -16,22 +16,23 @@ public class ScorePanel : MonoBehaviour
     private void OnEnable()
     {
         int i = 1;
-        int fullscore = 0;
-        int score = 0;
+        int fullCount = 0;
+        int rightCount = 0;
 
         foreach (var g in SwitchList.instance.transform.GetComponentsInChildren<Topic>(true))
         {
             Debug.Log(g.Tip() + "," + g.score);
             GameObject go = Instantiate(srTemple);
             ScoreResult sr = go.GetComponent<ScoreResult>();
-            int sc = g.Score();
-            score += sc;
-            fullscore += g.FullScore();
-            if (sc>0)
+            //int sc = g.Score();
+
+            fullCount +=1;
+            if (g.Right())
             {
                 sr.score.color = new Color(52f/255f,199f/255f,89f/255f);
                 sr.score.text = "+"+g.Score().ToString();
                 sr.scoreImage.sprite = succIcon;
+                rightCount++;
             }
             else
             {
@@ -44,9 +45,9 @@ public class ScorePanel : MonoBehaviour
             go.transform.parent = srParent;
             i++;
         }
-        endScore.text = score.ToString();
-        endFullScore.text = $"满分{fullscore}";
-        rightRate.text = $"正确率{((float)score / fullscore * 100f).ToString("0.0")}%";
+        endScore.text = rightCount.ToString();
+        endFullScore.text = $"得分";
+        rightRate.text = $"正确率{((float)rightCount / fullCount * 100f).ToString("0.0")}%";
     }
 
 

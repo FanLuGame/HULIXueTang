@@ -2,13 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Topic : MonoBehaviour
+public class Topic : MonoBehaviour 
 {
     /// <summary>
     /// 该题的名称
     /// </summary>
     public string tpname="test";
     public int score = 0;
+    public bool right = true;
     public int fullscore = 10;
     public virtual int Score()
     {
@@ -22,5 +23,8 @@ public class Topic : MonoBehaviour
     {
         return tpname;
     }
-
+    public virtual bool Right()
+    {
+        return right;
+    }
 }
